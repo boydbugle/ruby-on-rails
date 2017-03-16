@@ -1,0 +1,27 @@
+<%= render('layouts/errors', :object => @animal)%>
+
+<%= form_for [@sighting,@animal] do |f| %>
+  <div class="control-group">
+      <%= f.label :species %>
+      <div class="controls">
+        <%= f.text_field :species %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :number %>
+      <div class="controls">
+        <%= f.text_field :number %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :description %>
+      <div class="controls">
+        <%= f.text_area :description %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit 'submit', :class => 'btn btn-primary'%>
+      </div>
+    </div>
+<% end %>
