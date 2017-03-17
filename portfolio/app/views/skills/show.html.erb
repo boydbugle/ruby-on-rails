@@ -2,3 +2,15 @@
 
 <h3><%= @skill.language %></h3>
 
+<% if @skill.projects.any? %>
+
+    <h3>my projects in <%= @skill.language %></h3>
+
+    <% @skill.projects.each do |project|%>
+    <p><%= project.name %>,<%= project.description %>,<%= project.link %></p>
+    <% end %>
+
+    <% else %>
+    <h3>i currently have no projects for <%= @skill.language%></h3>
+<% end %>
+
