@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'projects/edit'
 
+  get 'skills/admin'
+
   get 'skills/index'
 
   get 'skills/show'

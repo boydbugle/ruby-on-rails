@@ -1,0 +1,12 @@
+<h1> Welcome to admin </h1>
+
+<%= link_to "new language?", new_skill_path %>
+
+
+<ul>
+<% @skills.each do |skill| %>
+  <li ><%= link_to skill.language, skill_path(skill) %></li>
+  |<%= link_to "edit-lang", edit_skill_path(skill)%>
+  |<%= link_to "del-lang", skill_path(skill), :data => {:confirm => 'delete lang?', :method => 'delete'}%>
+<% end %>
+</ul>
