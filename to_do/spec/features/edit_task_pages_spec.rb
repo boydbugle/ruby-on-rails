@@ -8,7 +8,7 @@ require 'rails_helper'
       click_on 'Edit'
       fill_in 'Description', :with => 'Wash the dog'
       click_on 'Update Task'
-      expect(page).to have_content 'Wash the dog'
+      expect(page).to have_content 'wash the dog'
     end
 
     it "gives error when no description is entered" do
