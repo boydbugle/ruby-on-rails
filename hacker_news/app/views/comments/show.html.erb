@@ -1,2 +1,23 @@
 <h1>Comments#show</h1>
-<p>Find me in app/views/comments/show.html.erb</p>
+
+<% if @comments.any? %>
+    <h3> comments on opinion by:<%= @comment.author %> </h3>
+    <ul>
+        <% @comments.each do |comment| %>
+            <li><%= simple_format comment.author %></li>
+            <p><%= simple_format comment.opinion %></p>
+        <% end %>
+    </ul>
+    <% else %>
+    <h3> there are no comments on opinion by:<%= @comment.author %> </h3>
+<% end %>
+
+
+
+<%= form_tag new_comment_comment_path(@comment) do %>
+    <%= label_tag :author %>
+    <%= text_field_tag :author %>
+    <%= label_tag :opinion %>
+    <%= text_field_tag :opinion %>
+    <%= submit_tag "submit" %>
+  <% end %>

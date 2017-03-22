@@ -8,6 +8,10 @@ get '/sessions/new', to: 'sessions#new', as: 'login'
   root to: 'posts#index'
 
   resources :posts do
-    resources :comments, :except =>[:show]
+    resources :comments
+  end
+
+  resources :comments do
+    resources :comments
   end
 end

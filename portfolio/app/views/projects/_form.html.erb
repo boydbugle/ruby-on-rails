@@ -1,0 +1,34 @@
+<%= render('layouts/errors', :object => @project) %>
+
+
+
+<%= form_tag projects_path do %>
+ <div class="control-group">
+    <%= label_tag "Skill" %>
+    <div class="controls">
+      <%= collection_select(:skill_id, 0, Skill.all, :id, :language, prompt: 'Select Language') %>
+    </div>
+  </div> 
+  <div class="control-group">
+      <%= label_tag :name %>
+      <div class="controls">
+        <%= text_field_tag :name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= label_tag :description %>
+      <div class="controls">
+        <%= text_field_tag :description %>
+      </div>
+    <div class="control-group">
+      <%= label_tag :link %>
+      <div class="controls">
+        <%= text_field_tag :link %>
+    </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= submit_tag 'submit', :class => 'btn btn-primary'%>
+      </div>
+    </div>
+<% end %>

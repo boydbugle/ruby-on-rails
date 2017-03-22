@@ -1,15 +1,15 @@
 <h2><%= @post.author%></h2>
 <h2><%= @post.link%></h2>|<%= link_to 'Edit post', edit_post_path(@post)%>
-|<%= link_to 'Delete', post_path(@post), :data => {:confirm => "Confirm Delete!!",:method => "delete"} %>
+|<%= link_to 'Delete', post_path(@post), data: {confirm: "Confirm Delete!!",method: "delete"} %>
 
 <% if @post.comments.any? %>
     <h3>comments on post by:<%= @post.author %></h3>
     <ul>
         <% @post.comments.each do |comment| %>
             <li><%= comment.author%></li>
-            <p><%= comment.opinion%></p>
+            <p><%= link_to comment.opinion, post_comment_path(@post,comment)%></p>
             <p>|<%= link_to "Edit", edit_post_comment_path(@post,comment)%>
-            |<%= link_to "Delete", post_comment_path(@post,comment), :data => {:confirm => "Delete comment?", :model => "delete"} %>
+            |<%= link_to "Delete", post_path(@post), data: {confirm: "Delete comment?", model: "delete"} %>
             </p>
         <% end %>
     </ul>

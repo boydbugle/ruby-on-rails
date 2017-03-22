@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_filter :require_login, only:[:edit, :update]
+  # before_filter :require_login, only:[:edit, :update]
 
   private
   def current_user
@@ -8,9 +8,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
   
-  def require_login
-     current_user=nil?
-      flash[:alert] = "You must be logged in to access this section"
-      redirect_to login_url 
-  end
+  # def require_login
+  #    current_user=nil?
+  #     flash[:alert] = "You must be logged in to access this section"
+  #     redirect_to login_url 
+  # end
 end

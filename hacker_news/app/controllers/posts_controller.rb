@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+   before_filter :require_login, only: :show
 
   def new
     @post = Post.new
@@ -43,5 +44,15 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:author,:link)
+  end
+
+  def require_login
+      current_user=nil?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_url 
+    # else
+    #   @post =Post.find(params[:id])
+    #   redirect_to post_path(@post)
+    # end
   end
 end

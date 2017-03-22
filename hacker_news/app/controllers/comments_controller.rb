@@ -13,9 +13,14 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+  
 
-  # def show
-  # end
+  def show
+    @comment = Comment.find(params[:id])
+    @commentable = @comment
+    @comments = @commentable.comments  
+    # @comment = @comments.new
+  end
 
   def edit
     @post = Post.find(params[:post_id])
