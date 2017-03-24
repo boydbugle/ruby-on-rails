@@ -2,33 +2,27 @@
 
 
 
-<%= form_tag projects_path do %>
- <div class="control-group">
-    <%= label_tag "Skill" %>
-    <div class="controls">
-      <%= collection_select(:skill_id, 0, Skill.all, :id, :language, prompt: 'Select Language') %>
-    </div>
-  </div> 
+<%= form_for [@skill,@project] do |f| %>
   <div class="control-group">
-      <%= label_tag :name %>
+      <%= f.label :name %>
       <div class="controls">
-        <%= text_field_tag :name %>
+        <%= f.text_field :name %>
       </div>
     </div>
     <div class="control-group">
-      <%= label_tag :description %>
+      <%= f.label :description %>
       <div class="controls">
-        <%= text_field_tag :description %>
+        <%= f.text_field :description %>
       </div>
     <div class="control-group">
-      <%= label_tag :link %>
+      <%= f.label :link %>
       <div class="controls">
-        <%= text_field_tag :link %>
+        <%= f.text_field :link %>
     </div>
     </div>
     <div class="control-group">
       <div class="controls">
-        <%= submit_tag 'submit', :class => 'btn btn-primary'%>
+        <%= f.submit 'submit', class: 'btn btn-primary'%>
       </div>
     </div>
 <% end %>

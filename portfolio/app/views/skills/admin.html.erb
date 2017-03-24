@@ -1,6 +1,5 @@
 <h1> Welcome to admin </h1>
 
-<%= link_to "add new language?", new_skill_path %>
 
 
 <ul>
@@ -8,7 +7,13 @@
   <li ><%= link_to skill.language, skill_path(skill) %></li>
   &nbsp &nbsp &nbsp |<%= link_to "edit-lang", edit_skill_path(skill)%>
   &nbsp|<%= link_to "del-lang", skill_path(skill), :data => {:confirm => 'delete lang?', :method => 'delete'}%>
+  &nbsp|<%= link_to "add new project?",  new_skill_project_path(skill) %>
+  <% skill.projects.each do |project| %>
+    <p><%= link_to project.name, skill_project_path(skill,project) %></p>
+     &nbsp &nbsp &nbsp |<%= link_to "Edit project", edit_skill_project_path(skill,project)%>
+  &nbsp|<%= link_to "Del project", skill_project_path(skill,project), data: {confirm: 'delete project?', method: 'delete'}%>
+  <% end %>
 <% end %>
 </ul>
 
-<%= link_to "add new project?",  new_project_path %>
+

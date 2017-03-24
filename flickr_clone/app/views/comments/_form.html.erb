@@ -1,0 +1,13 @@
+<%= render 'layouts/errors', object: @comment %>
+
+<%= form_for [@photo,@comment] do |f| %>
+  <div class="control-group">
+      <%= f.label :comment  %>
+      <div class="controls">
+        <%= f.text_field :comment %>
+      </div>
+    </div>
+    <div class="control-group">
+        <div class="conrols"><%= f.submit "upload" %></div>
+    </div>
+<% end %>

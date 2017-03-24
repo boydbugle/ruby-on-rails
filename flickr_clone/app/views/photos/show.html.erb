@@ -4,12 +4,14 @@
 <p><%= image_tag(@photo.image.url(:large)) %></p>
 <p><%= @photo.tag %></p>
 
-<%= link_to "Add comment", new_photo_comment(@photo)%>
+<%= link_to "Add comment", new_photo_comment_path(@photo)%>
 <% if @photo.comments.any? %>
     <h3>View Comments</h3>
     <ul>
         <% @photo.comments.each do |comment|%>
             <li><%= comment.comment %></li>
+            <%= link_to "Edit", edit_photo_comment_path(@photo,comment)%>
+            <%= link_to "Delete", photo_comment_path(@photo,comment), data: {confirm: "Delete Comment?", method: "delete"}%>
         <% end %>
     </ul>
     <% else %>
