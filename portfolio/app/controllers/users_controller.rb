@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def new
-
+    @user = User.new
   end
   def create
     @user = User.new(user_params)
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     flash[:alert] = "There was a problem creating your account. Please try again."
 
-    redirect_to :back
+    render :new
 
     end
 

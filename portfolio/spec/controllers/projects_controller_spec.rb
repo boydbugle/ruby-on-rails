@@ -5,14 +5,14 @@ RSpec.describe ProjectsController, type: :controller do
   describe "GET #show" do
     it "returns http success" do
       get :show
-      expect(response).to have_http_status(:success)
+      expect(response).to have_content("project")
     end
   end
 
   describe "GET #new" do
-    it "returns http success" do
+    it "returns form" do
       get :new
-      expect(response).to have_http_status(:success)
+      expect(page).to have_content('form')
     end
   end
 
