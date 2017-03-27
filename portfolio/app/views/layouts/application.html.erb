@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <%= link_to "Sign Up", new_user_path %>
+    <%= link_to "Log In", log_in_path %>
+    <%= link_to "Log Out", log_out_path, method: "delete" %>
+    <%= flash[:alert]%>
+    <%= flash[:notice]%>
     <%= yield %>
   </body>
 </html>
