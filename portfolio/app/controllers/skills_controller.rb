@@ -1,4 +1,5 @@
 class SkillsController < ApplicationController
+  before_action :must_login?, only:[:admin]
   def index
     @skills = Skill.all
   end
