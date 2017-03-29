@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def new
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new
+    # @commentscomment = @comment.comments.new
   end
 
   def create
@@ -14,12 +15,21 @@ class CommentsController < ApplicationController
     end
   end
   
+  # def commentable
+  #   @comment = Comment.find(params[:id])
+  #   @commentscomment = @comment.comments.new(comment_params) 
+  #   if @commentscomment.save
+  #     redirect_to @comment
+  #   else
+  #     flash[:alert] = "failed to save"
+  #     render :show
+  #   end
+  # end
 
   def show
     @comment = Comment.find(params[:id])
     @commentable = @comment
     @comments = @commentable.comments  
-    # @comment = @comments.new
   end
 
   def edit

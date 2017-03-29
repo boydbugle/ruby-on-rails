@@ -14,10 +14,10 @@
 
 
 
-<%= form_tag new_comment_comment_path(@comment) do %>
-    <%= label_tag :author %>
-    <%= text_field_tag :author %>
-    <%= label_tag :opinion %>
-    <%= text_field_tag :opinion %>
-    <%= submit_tag "submit" %>
+<%= form_for commentable_path(@comment) do |f| %>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+    <%= f.label :opinion %>
+    <%= f.text_field :opinion %>
+    <%= f.submit "submit" %>
   <% end %>
