@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id            :integer          not null, primary key
+#  name          :string
+#  email         :string
+#  password_hash :string
+#  password_salt :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class User < ApplicationRecord
 
     attr_accessor :password
@@ -8,11 +21,12 @@ class User < ApplicationRecord
     validates :password, confirmation: true 
     validates_length_of :password, in: 6..20, on: :create
 
+    
     before_save :encrypt_password
-#     before_save :downcase_fields
+    # before_save :downcase_fields
 
 #    def downcase_fields
-#       self.email.downcase
+#       self.email.downcase!
 #    end
 
     def self.authenticate(email, password)

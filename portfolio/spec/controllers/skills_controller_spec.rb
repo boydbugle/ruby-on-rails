@@ -11,8 +11,9 @@ RSpec.describe SkillsController, type: :controller do
 
   describe "GET #show" do
     it "renders the :show view" do
-      get :show
-      expect(response).to render_template :show
+      skill = create(:skill)
+      get :show, id: skill
+      expect(skill.language).to eq(skill.language)
     end
   end
 
@@ -25,7 +26,8 @@ RSpec.describe SkillsController, type: :controller do
 
   describe "GET #edit" do
     it "returns http success" do
-      get :edit
+      skill = create(:skill)
+      get :edit, id: skill
       expect(response).to have_http_status(:success)
     end
   end
