@@ -10,9 +10,9 @@ RSpec.describe SkillsController, type: :controller do
   end
 
   describe "GET #show" do
-    it "returns http success" do
+    it "renders the :show view" do
       get :show
-      expect(response).to have_http_status(:success)
+      expect(response).to render_template :show
     end
   end
 

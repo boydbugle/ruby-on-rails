@@ -38,6 +38,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         null,
@@ -68,6 +70,16 @@
         null,
         null,
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        24,
+        24,
+        null,
         null,
         null,
         null,
@@ -604,6 +616,16 @@
         null,
         null
       ],
+      "/home/donga/projects/ruby-rails/portfolio/spec/factories/project.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/donga/projects/ruby-rails/portfolio/spec/factories/skill.rb": [
         1,
         1,
@@ -680,6 +702,20 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/donga/projects/ruby-rails/portfolio/spec/features/add_projects_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -859,10 +895,14 @@
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/skills/new.html.erb_spec.rb": [
-        1,
         null,
-        1,
-        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/skills/show.html.erb_spec.rb": [
@@ -870,6 +910,10 @@
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/users/new.html.erb_spec.rb": [
@@ -880,6 +924,6 @@
         null
       ]
     },
-    "timestamp": 1490780121
+    "timestamp": 1490822475
   }
 }

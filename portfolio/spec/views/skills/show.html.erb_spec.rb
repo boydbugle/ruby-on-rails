@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "skills/show.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "displays the datails on skill" do
+    @skill = build(:skill)
+    render
+    expect(rendered).to have_content(@skill.language)
+  end
 end
