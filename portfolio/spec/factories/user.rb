@@ -7,8 +7,8 @@ FactoryGirl.define do
       password "foobar"
       email "msee@gmail.com"
 
-      after(:build) do |user,evaluator|
-        user.email.upcase! if evaluator.upcased
+      after(:create) do |user,evaluator|
+        user.email.downcase! if evaluator.upcased
       end
   end
 end

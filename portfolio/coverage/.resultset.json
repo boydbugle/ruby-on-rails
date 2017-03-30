@@ -78,11 +78,11 @@
         null,
         null,
         1,
-        22,
-        22,
+        23,
+        23,
         null,
         1,
-        22,
+        23,
         null,
         null,
         null,
@@ -625,7 +625,7 @@
         null,
         null,
         1,
-        1,
+        null,
         null,
         null,
         null,
@@ -647,9 +647,9 @@
         null,
         1,
         null,
-        3,
+        5,
         null,
-        3,
+        5,
         null,
         null,
         null,
@@ -804,7 +804,6 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/helpers/sessions_helper_spec.rb": [
@@ -820,7 +819,6 @@
         null,
         null,
         null,
-        1,
         1,
         null
       ],
@@ -838,7 +836,6 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/helpers/users_helper_spec.rb": [
@@ -854,7 +851,6 @@
         null,
         null,
         null,
-        1,
         1,
         null
       ],
@@ -934,7 +930,7 @@
         null,
         1,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -952,13 +948,11 @@
         1,
         null,
         1,
-        1,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/projects/new.html.erb_spec.rb": [
         1,
         null,
-        1,
         1,
         null
       ],
@@ -967,12 +961,15 @@
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/sessions/new.html.erb_spec.rb": [
         1,
         null,
-        1,
         1,
         null
       ],
@@ -980,19 +977,24 @@
         1,
         null,
         1,
-        1,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/skills/index.html.erb_spec.rb": [
         1,
         null,
         1,
-        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/spec/views/skills/new.html.erb_spec.rb": [
+        1,
         null,
-        null,
+        1,
         null,
         null,
         null,
@@ -1016,10 +1018,9 @@
         1,
         null,
         1,
-        1,
         null
       ]
     },
-    "timestamp": 1490868566
+    "timestamp": 1490879355
   }
 }

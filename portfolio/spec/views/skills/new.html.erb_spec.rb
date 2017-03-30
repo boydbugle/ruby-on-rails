@@ -1,9 +1,10 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe "skills/new.html.erb", type: :view do
+RSpec.describe "skills/new.html.erb", type: :view do
+
 #   it "displays form partial for new skill" do
-#     skill = Skill.new
+#     skill = build(:skill)
 #     render
-#     expect(view).to render_template(partial: "_form")
+#     expect(view).to have_content(partial: "_form")
 #   end
-# end
+end

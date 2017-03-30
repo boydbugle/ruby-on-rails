@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "skills/index.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # it "should display a list of skills" do
+  #   @skills = build(:skill)
+  #   render
+  #   assigns(:skills).should eq([skill])
+  #   expect(@skills).to eq([skill])
+  # end
 end
