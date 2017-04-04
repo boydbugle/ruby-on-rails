@@ -1,2 +1,28 @@
 <h1>Messages#new</h1>
-<p>Find me in app/views/messages/new.html.erb</p>
+<%= render('layouts/errors', :object => @message) %>
+
+ <%= form_for @message do |f| %> 
+    <div class="control-group">
+      <%= f.label :to %>
+      <div class="controls">
+        <%= f.text_field :to %>
+      </div>
+    </div>
+     <div class="control-group">
+      <%= f.label :from %>
+      <div class="controls">
+        <%= f.text_field :from %>
+      </div>
+    </div>
+     <div class="control-group">
+      <%= f.label :body %>
+      <div class="controls">
+        <%= f.text_area :body %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit 'submit', :class => 'btn btn-primary'%>
+      </div>
+    </div>
+<% end %>

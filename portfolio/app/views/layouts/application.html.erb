@@ -9,16 +9,38 @@
   </head>
 
   <body>
-    <% if current_user %>
-      logged in as:<%= current_user.name %>
-      <%= link_to "Log Out", log_out_path %>
-       <%= link_to "admin", skills_admin_path%>
-    <% else %>
-      <%= link_to "Sign Up", new_user_path %>
-      <%= link_to "Log In", log_in_path %>
-    <% end %>
-    <%= flash[:alert]%>
-    <%= flash[:notice]%>
-    <%= yield %>
+  <div class="container">
+      <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="/skills/about">Home</a>
+      <a href=" /skills/admin">Skills</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div>
+
+  <!-- Use any element to open/show the overlay navigation menu -->
+
+    <span onclick="openNav()" class="x glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
+
+      <% if current_user %>
+        logged in as:<%= current_user.name %>
+        <%= link_to "Log Out", log_out_path %>
+        <%= link_to "admin", skills_admin_path%>
+      <% else %>
+        <%= link_to "Sign Up", new_user_path %>
+        <%= link_to "Log In", log_in_path %>
+      <% end %>
+      <%= flash[:alert]%>
+      <%= flash[:notice]%>
+      <%= yield %>
+  </div>
   </body>
 </html>

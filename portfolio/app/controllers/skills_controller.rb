@@ -4,6 +4,10 @@ class SkillsController < ApplicationController
     @skills = Skill.all
   end
 
+  def about
+    # @skills = Skill.all
+  end
+
   def admin
     @skills = Skill.all
   end

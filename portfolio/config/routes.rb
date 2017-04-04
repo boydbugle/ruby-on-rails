@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'skills#index'
+  root :to => 'skills#about'
 
   get "/log-in", to: "sessions#new"
 
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/log-out", to: "sessions#destroy", as: :log_out
 
   get 'skills/admin'
+
+  get 'skills/about'
 
   resources :users
 

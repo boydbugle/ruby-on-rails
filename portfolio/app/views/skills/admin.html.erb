@@ -1,13 +1,19 @@
 <h1> Welcome to admin </h1>
 
-
+<div class="container">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
 
 <ul>
 <% @skills.each do |skill| %>
   <li ><%= link_to skill.language, skill_path(skill) %></li>
-  &nbsp &nbsp &nbsp |<%= link_to "edit-lang", edit_skill_path(skill)%>
-  &nbsp|<%= link_to "del-lang", skill_path(skill), :data => {:confirm => 'delete lang?', :method => 'delete'}%>
-  &nbsp|<%= link_to "add new project?",  new_skill_project_path(skill) %>
+  &nbsp &nbsp &nbsp |<span class="glyphicon glyphicon-pencil" aria-hidden="true"<%= link_to "edit-lang", edit_skill_path(skill)%></span>
+  &nbsp|<span class="glyphicon glyphicon-trash" aria-hidden="true"<%= link_to "del-lang", skill_path(skill), :data => {:confirm => 'delete lang?', :method => 'delete'}%></span>
+  &nbsp|<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"<%= link_to "add new project?",  new_skill_project_path(skill) %></span>
   <% skill.projects.each do |project| %>
     <p><%= link_to project.name, skill_project_path(skill,project) %></p>
      &nbsp &nbsp &nbsp |<%= link_to "Edit project", edit_skill_project_path(skill,project)%>
@@ -16,4 +22,4 @@
 <% end %>
 </ul>
 
-
+</div>
