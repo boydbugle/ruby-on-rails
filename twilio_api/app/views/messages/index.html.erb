@@ -1,8 +1,0 @@
-<h1>Messages#index</h1>
-
-<% @messages.each do |message|%>
-    <p><%= message.to %></p>
-    <p><%= message.body %></p>
-<% end %>
-
-<%= link_to "Send SMS", new_message_path %>

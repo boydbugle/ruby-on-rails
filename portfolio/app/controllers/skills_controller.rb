@@ -10,6 +10,7 @@ class SkillsController < ApplicationController
 
   def admin
     @skills = Skill.all
+    @projects = Project.all
   end
 
   def show

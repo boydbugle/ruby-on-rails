@@ -24,3 +24,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
+function openTab(blockName) {
+    var i;
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    document.getElementById(blockName).style.display = "inline"; 
+
+}
