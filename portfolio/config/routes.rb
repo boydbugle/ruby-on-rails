@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :profiles
+
    resources :skills do
      resources :projects, :except => [:index]
     end

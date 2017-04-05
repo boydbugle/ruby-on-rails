@@ -8,6 +8,7 @@
 
     <% @skill.projects.each do |project|%>
     <p><%= project.name %>,<%= project.description %>,<%= project.link %></p>
+    <p><%= image_tag(project.image.url(:large)) %></p>
     <% end %>
 
     <% else %>

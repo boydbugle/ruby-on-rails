@@ -4,7 +4,7 @@
   <ul class="nav nav-tabs nav-justified">
     <li class="active"><a href="javascript:void(0)" onclick="openTab('block1')">Profile</a></li>
     <li><a href="javascript:void(0)" onclick="openTab('block2')">Skills</a></li>
-    <li><a href="#">Projects</a></li>
+    <li><a href="javascript:void(0)" onclick="openTab('block3')">Projects</a></li>
     <li><a href="#">Blog</a></li>
   </ul>
 
@@ -24,10 +24,12 @@
   <% end %>
   </ul>
 </div>
+
   <div id="block2",class="tab" style="display:none">
     <ul>
     <% @projects.each do |project| %>
         <li><%= link_to project.name, skill_project_path(project.skill,project) %></li>
+        <p><%= image_tag(project.image.url(:medium)) %></p>
     <% end %>
     </ul>
   </div>

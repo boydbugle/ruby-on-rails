@@ -50,6 +50,6 @@ class SkillsController < ApplicationController
   end
   private
   def skill_params
-    params.require(:skill).permit(:language)
+    params.require(:skill).permit(:image,:language)
   end
 end

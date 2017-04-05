@@ -78,11 +78,11 @@
         null,
         null,
         1,
-        23,
-        23,
+        24,
+        24,
         null,
         1,
-        23,
+        24,
         null,
         null,
         null,
@@ -324,6 +324,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         null,
         null
@@ -471,6 +473,11 @@
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
+        0,
         0,
         null,
         null,
@@ -562,6 +569,14 @@
         1,
         null
       ],
+      "/home/donga/projects/ruby-rails/portfolio/app/models/profile.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/donga/projects/ruby-rails/portfolio/app/models/project.rb": [
         null,
         null,
@@ -576,6 +591,8 @@
         null,
         null,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -653,6 +670,15 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/home/donga/projects/ruby-rails/portfolio/spec/factories/profiles.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -854,6 +880,13 @@
         1,
         null
       ],
+      "/home/donga/projects/ruby-rails/portfolio/spec/models/profile_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
+      ],
       "/home/donga/projects/ruby-rails/portfolio/spec/models/project_spec.rb": [
         null,
         null,
@@ -1021,6 +1054,6 @@
         null
       ]
     },
-    "timestamp": 1490884274
+    "timestamp": 1491403521
   }
 }

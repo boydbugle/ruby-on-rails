@@ -4,6 +4,6 @@
 
 <ul>
 <% @skills.each do |skill| %>
-  <li ><%= link_to skill.language, skill_path(skill) %></li>
+  <li ><%= image_tag(skill.image.url(:thumb))%><%= link_to skill.language, skill_path(skill) %></li>
 <% end %>
 </ul>
