@@ -1,0 +1,10 @@
+<h1>Messages#index</h1>
+<% if @messages.any? %>
+    <% @messages.each do |message|%>
+        <p><%= message.to %></p>
+        <p><%= message.body %></p>
+    <% end %>
+<% else %>
+    <h3>there are currently no messages</h3>
+<% end %>
+<%= link_to "Send SMS", new_message_path %>
