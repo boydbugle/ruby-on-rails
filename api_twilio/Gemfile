@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'twilio-ruby'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -40,8 +40,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
   gem 'rspec-rails'
-  # gem 'vcr','~> 3.0.3'
-  # gem 'webmock','~> 2.3.2'
+  gem 'vcr','~> 3.0.3'
+  gem 'webmock','~> 2.3.2'
+  gem 'restclient','~> 0.14.4'
 end
 
 group :development do
