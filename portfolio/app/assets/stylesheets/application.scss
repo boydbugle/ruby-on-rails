@@ -4,8 +4,41 @@
 @import "bootstrap";
 
 body {
-    margin: 80px;
+    // margin: 80px;
+    font-family: Courier;
+    font-style: oblique;
+    font-size: 28px;
 }
+// 
+.container {
+    border: 0px solid;
+    max-width: 95%;
+    // padding-left: 50px;
+    // padding-right: 50px;
+    margin: 80px;
+    display: block;
+    overflow-x: hidden;
+}
+// .headerNav {
+//     position: fixed;
+//     top: 10px;
+//     width: 90%;
+//     height: 100px;
+// }
+// .content {
+//     width: 100%;
+//     overflow-x: hidden;
+//     clear: both;
+//     border: 1px solid;
+//     margin: 50px;
+// }
+// .post {
+//     margin-bottom: 45px;
+//     width: 100%;
+//     border: 1px solid;
+//     margin-top: 50px;
+//     text-align: center;
+// }
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */   
@@ -64,15 +97,28 @@ body {
 }
 
 span.x {
-    font-size: 2.5em;
+    // font-size: 2.5em;
     float: right;
 }
 
 .img_avatar{
+    border-radius: 50%;
+    padding: 5px;
+    width: 100px;
+    height: 100px;   
+}
+.img_background{
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 50px;
+    width: 80%;
+    height: 300px;   
+}
+
+.img_icons{
     border: 1px solid #ddd;
     border-radius: 50%;
     padding: 5px;
-    width: 180px;
-    height: 180px;
-    
+    width: 50px;
+    height: 50px;   
 }

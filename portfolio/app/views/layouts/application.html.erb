@@ -19,31 +19,58 @@
     <!-- Overlay content -->
     <div class="overlay-content">
       <a href="/skills/about">Home</a>
-      <a href=" /skills/admin">Skills</a>
+      <a href=" /skills">Skills</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a>
+      <% if current_user %>
+             <a href="/skills/admin">Admin</a>
+     <% end %>
     </div>
 
   </div>
 
   <!-- Use any element to open/show the overlay navigation menu -->
+    <div class="headerNav">
+      <div class="content">
+        <span onclick="openNav()" class="x glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
 
-    <span onclick="openNav()" class="x glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
+        <%= image_tag "me.jpg", class: "img_avatar"%>
+        <h3>Boyd Ndonga</h3>
+        <h5>Software Developer</h5>
 
-    <%= image_tag "me.jpg", class: "img_avatar"%>
 
 
-      <% if current_user %>
-        logged in as:<%= current_user.name %>
-        <%= link_to "Log Out", log_out_path %>
-        <%= link_to "admin", skills_admin_path%>
-      <% else %>
-        <%= link_to "Sign Up", new_user_path %>
-        <%= link_to "Log In", log_in_path %>
-      <% end %>
-      <%= flash[:alert]%>
-      <%= flash[:notice]%>
+          <% if current_user %>
+            logged in as:<%= current_user.name %>
+            <%= link_to "Log Out", log_out_path %>
+          <% else %>
+            <%= link_to "Sign Up", new_user_path %>
+            <a href=" /log-in"><button class="btn btn-primary">login</button></a>
+          <% end %>
+          <%= flash[:alert]%>
+          <%= flash[:notice]%>
+        </div>
+      </div>
       <%= yield %>
+    <footer>
+    <div class="col-md-12">
+      <div class= "col-md-4">
+          <p><%= image_tag "github1.svg", class: "img_icons"%></p>
+          <p><%= image_tag "linkedin.svg", class: "img_icons"%></p>
+          <p><%= image_tag "tweeter.svg", class: "img_icons"%></p>
+      </div>
+      <div class= "col-md-4">
+          <p><%= image_tag "email.svg", class: "img_icons"%></p>
+          <p><%= image_tag "facebook.svg", class: "img_icons"%></p>
+          <p><%= image_tag "tweeter.svg", class: "img_icons"%></p>
+      </div>
+      <div class= "col-md-4">
+          <p><%= image_tag "email.svg", class: "img_icons"%></p>
+          <p><%= image_tag "linkedin.svg", class: "img_icons"%></p>
+          <p><%= image_tag "tweeter.svg", class: "img_icons"%></p>
+      </div>
+    </div>
+    </footer>
   </div>
   </body>
 </html>
