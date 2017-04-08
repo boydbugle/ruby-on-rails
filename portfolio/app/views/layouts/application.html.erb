@@ -15,26 +15,25 @@
 
     <!-- Button to close the overlay navigation -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+    
     <!-- Overlay content -->
     <div class="overlay-content">
       <a href="/skills/about">Home</a>
-      <a href=" /skills">Skills</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href=" /skills">Projects</a>
+      <a href="#">Blog</a>
       <% if current_user %>
              <a href="/skills/admin">Admin</a>
      <% end %>
     </div>
-
+    
   </div>
 
   <!-- Use any element to open/show the overlay navigation menu -->
     <div class="headerNav">
       <div class="content">
-        <span onclick="openNav()" class="x glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
-
-        <%= image_tag "me.jpg", class: "img_avatar"%>
+        <span onclick="openNav()" id= "left" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
+        <a href=" /log-in"><button id= "left" class="btn btn-primary">login</button></a>
+        <%= image_tag "me3.jpg", class: "img_avatar"%>
         <h3>Boyd Ndonga</h3>
         <h5>Software Developer</h5>
 
@@ -45,23 +44,24 @@
             <%= link_to "Log Out", log_out_path %>
           <% else %>
             <%= link_to "Sign Up", new_user_path %>
-            <a href=" /log-in"><button class="btn btn-primary">login</button></a>
+            <%#<a href=" /log-in"><button class="btn btn-primary">login</button></a>%>
           <% end %>
           <%= flash[:alert]%>
           <%= flash[:notice]%>
         </div>
       </div>
       <%= yield %>
+      <hr />
     <footer>
     <div class="col-md-12">
       <div class= "col-md-4">
-          <p><%= image_tag "github1.svg", class: "img_icons"%></p>
-          <p><%= image_tag "linkedin.svg", class: "img_icons"%></p>
-          <p><%= image_tag "tweeter.svg", class: "img_icons"%></p>
+          <p><%= image_tag "github1.svg", class: "img_icons" %> &nbsp;github</p>
+          <p><%= image_tag "linkedin.svg", class: "img_icons"%> &nbsp;linkedIn</p>
+          <p><%= image_tag "tweeter.svg", class: "img_icons"%> &nbsp;tweeter</p>
       </div>
       <div class= "col-md-4">
-          <p><%= image_tag "email.svg", class: "img_icons"%></p>
-          <p><%= image_tag "facebook.svg", class: "img_icons"%></p>
+          <p><%= image_tag "email.svg", class: "img_icons"%> &nbsp;email</p>
+          <p><%= image_tag "facebook.svg", class: "img_icons"%> &nbsp;facebook</p>
           <p><%= image_tag "tweeter.svg", class: "img_icons"%></p>
       </div>
       <div class= "col-md-4">

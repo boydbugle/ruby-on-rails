@@ -4,21 +4,18 @@
 @import "bootstrap";
 
 body {
-    // margin: 80px;
+    margin: 80px;
     font-family: Courier;
     font-style: oblique;
     font-size: 28px;
 }
 // 
-.container {
-    border: 0px solid;
-    max-width: 95%;
-    // padding-left: 50px;
-    // padding-right: 50px;
-    margin: 80px;
-    display: block;
-    overflow-x: hidden;
-}
+// .container {
+//     max-width: 95%;
+//     margin: 80px;
+//     display: block;
+//     overflow-x: hidden;
+// }
 // .headerNav {
 //     position: fixed;
 //     top: 10px;
@@ -96,9 +93,10 @@ body {
     }
 }
 
-span.x {
+#left {
     // font-size: 2.5em;
     float: right;
+    padding-left: 20px;
 }
 
 .img_avatar{

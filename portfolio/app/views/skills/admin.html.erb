@@ -2,9 +2,9 @@
 
 <div class="container">
   <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a href="javascript:void(0)" onclick="openTab('block1')">Profile</a></li>
-    <li><a href="javascript:void(0)" onclick="openTab('block2')">Skills</a></li>
-    <li><a href="javascript:void(0)" onclick="openTab('block3')">Projects</a></li>
+    <li ><a href="javascript:void(0)" onclick="openTab('block4')">Profile</a></li>
+    <li class="active"><a href="javascript:void(0)" onclick="openTab('block1')">Skills</a></li>
+    <li><a href="javascript:void(0)" onclick="openTab('block2')">Projects</a></li>
     <li><a href="#">Blog</a></li>
   </ul>
 
@@ -16,11 +16,17 @@
     &nbsp|<span class="glyphicon glyphicon-trash" aria-hidden="true"><%= link_to "del-lang", skill_path(skill), data: {confirm: 'delete lang?', method: 'delete'}%></span>
     &nbsp|<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"><%= link_to "new project?",  new_skill_project_path(skill) %></span>
     
+    <table>
     <% skill.projects.each do |project| %>
-      <p><%= link_to project.name, skill_project_path(skill,project) %></p>
-      &nbsp &nbsp &nbsp |<%= link_to "Edit project", edit_skill_project_path(skill,project)%>
-    &nbsp|<%= link_to "Del project", skill_project_path(skill,project), data: {confirm: 'delete project?', method: 'delete'}%>
+    <tr colspan="2">
+      <th colspan="2"><%= link_to project.name, skill_project_path(skill,project) %></th>
+    </tr>
+    <tr>
+      <td><%= link_to "Edit project", edit_skill_project_path(skill,project)%></td>
+      <td><%= link_to "Del project", skill_project_path(skill,project), data: {confirm: 'delete project?', method: 'delete'}%></td>
+    </tr>
     <% end %>
+    </table>
   <% end %>
   </ul>
 </div>
