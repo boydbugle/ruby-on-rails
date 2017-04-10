@@ -10,47 +10,49 @@
 
   <body>
   <div class="container">
-      <!-- The overlay -->
-  <div id="myNav" class="overlay">
+  <nav>
+        <!-- The overlay -->
+    <div id="myNav" class="overlay">
 
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a href="/skills/about">Home</a>
-      <a href=" /skills">Projects</a>
-      <a href="#">Blog</a>
-      <% if current_user %>
-             <a href="/skills/admin">Admin</a>
-     <% end %>
-    </div>
-    
-  </div>
-
-  <!-- Use any element to open/show the overlay navigation menu -->
-    <div class="headerNav">
-      <div class="content">
-        <span onclick="openNav()" id= "left" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
-        <a href=" /log-in"><button id= "left" class="btn btn-primary">login</button></a>
-        <%= image_tag "me3.jpg", class: "img_avatar"%>
-        <h3>Boyd Ndonga</h3>
-        <h5>Software Developer</h5>
-
-
-
-          <% if current_user %>
-            logged in as:<%= current_user.name %>
-            <%= link_to "Log Out", log_out_path %>
-          <% else %>
-            <%= link_to "Sign Up", new_user_path %>
-            <%#<a href=" /log-in"><button class="btn btn-primary">login</button></a>%>
-          <% end %>
-          <%= flash[:alert]%>
-          <%= flash[:notice]%>
-        </div>
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="/skills/about">Home</a>
+        <a href=" /skills">Projects</a>
+        <a href="#">Blog</a>
+        <% if current_user %>
+              <a href="/skills/admin">Admin</a>
+      <% end %>
       </div>
-      <%= yield %>
+      
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+        <div class="content">
+          <span onclick="openNav()" id= "left" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" ></span>
+          <a href=" /log-in"><button id= "left" class="btn btn-primary">login</button></a>
+          <%= image_tag "me3.jpg", class: "img_avatar"%>
+          <h3>Boyd Ndonga</h3>
+          <h5>Software Developer</h5>
+
+
+
+            <% if current_user %>
+              logged in as:<%= current_user.name %>
+              <%= link_to "Log Out", log_out_path %>
+            <% else %>
+              <%= link_to "Sign Up", new_user_path %>
+              <%#<a href=" /log-in"><button class="btn btn-primary">login</button></a>%>
+            <% end %>
+            <%= flash[:alert]%>
+            <%= flash[:notice]%>
+          </div>
+    </nav>
+      <div id="render">
+        <%= yield %>
+      </div>
       <hr />
     <footer>
     <div class="col-md-12">

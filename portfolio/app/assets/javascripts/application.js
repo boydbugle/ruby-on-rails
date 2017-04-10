@@ -34,3 +34,15 @@ function openTab(blockName) {
     document.getElementById(blockName).style.display = "inline"; 
 
 }
+$(document).scroll(function () {
+    var scroll = $(this).scrollTop();
+    var topDist = $(".content").position();
+    if ( scroll > topDist.top) {
+        $('nav').addClass("change");
+    } else {       
+        $('nav').removeClass("change");
+    }
+});
+
+
+ 
