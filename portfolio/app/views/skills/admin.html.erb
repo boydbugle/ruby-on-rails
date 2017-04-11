@@ -1,12 +1,20 @@
 <h1> Welcome to admin </h1>
 
 <div class="container">
-  <ul class="nav nav-tabs nav-justified">
-    <li ><a href="javascript:void(0)" onclick="openTab('block4')">Profile</a></li>
-    <li class="active"><a href="javascript:void(0)" onclick="openTab('block1')">Skills</a></li>
-    <li><a href="javascript:void(0)" onclick="openTab('block2')">Projects</a></li>
-    <li><a href="#">Blog</a></li>
-  </ul>
+  <div class="admintab">
+    <ul class="nav nav-tabs nav-justified">
+      <li ><a href="javascript:void(0)" onclick="openTab('block4')">Profile</a></li>
+      <li class="active"><a href="javascript:void(0)" onclick="openTab('block1')">Skills</a></li>
+      <li><a href="javascript:void(0)" onclick="openTab('block2')">Projects</a></li>
+      <li><a href="javascript:void(0)" onclick="openTab('block3')">Blog</a></li>
+    </ul>
+  </div>
+
+  <p>
+  |<%= link_to "Add New Skill", new_skill_path %>|
+  <%= link_to "Add New Blog", new_blog_path %>|
+  </p>
+
 
 <div id="block1",class="tab" style="overflow-x:auto;">
   <table>
@@ -34,6 +42,18 @@
     <% @projects.each do |project| %>
         <li><%= link_to project.name, skill_project_path(project.skill,project) %></li>
         <p><%= image_tag(project.image.url(:medium)) %></p>
+    <% end %>
+    </ul>
+  </div>
+
+  <div id="block3",class="tab" style="display:none">
+    <ul>
+    <% @blogs.each do |blog| %>
+        <li><%= link_to blog.title, blogs_path %>
+        <%= link_to edit_blog_path(blog),class: "btn btn-primary" do %><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i><% end %>|
+        <%= link_to blog_path(blog), data: {confirm: 'delete blog?', method: 'delete'},class: "btn btn-primary" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %>
+        </li>
+        <p><%= image_tag(blog.image.url(:medium)) %></p>
     <% end %>
     </ul>
   </div>

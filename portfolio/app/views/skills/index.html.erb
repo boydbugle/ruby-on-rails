@@ -5,7 +5,7 @@
 <table>
   <tr>
     <% @skills.each do |skill| %>
-      <th colspan="2"><%= link_to image_tag(skill.image.url(:thumb)), skill_path(skill) %><%= link_to  skill.language, skill_path(skill) %></td>
+      <th colspan="2"><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:thumb))%><%= skill.language %><% end %></td>
   </tr>
   <tr>
     <% skill.projects.each do |project| %>

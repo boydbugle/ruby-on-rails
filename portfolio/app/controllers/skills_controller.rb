@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
   def admin
     @skills = Skill.all
     @projects = Project.all
+    @blogs = Blog.all
   end
 
   def show

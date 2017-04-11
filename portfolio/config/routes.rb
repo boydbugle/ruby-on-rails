@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :blogs
+
   resources :profiles
 
    resources :skills do

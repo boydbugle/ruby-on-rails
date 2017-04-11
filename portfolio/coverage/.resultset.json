@@ -78,11 +78,11 @@
         null,
         null,
         1,
-        24,
-        24,
+        26,
+        26,
         null,
         1,
-        24,
+        26,
         null,
         null,
         null,
@@ -326,6 +326,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
         1,
         null,
         null
@@ -337,7 +341,7 @@
         null,
         1,
         null,
-        1,
+        2,
         null,
         null,
         null,
@@ -356,6 +360,10 @@
         null
       ],
       "/home/donga/projects/ruby-rails/portfolio/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/donga/projects/ruby-rails/portfolio/app/helpers/blogs_helper.rb": [
         1,
         null
       ],
@@ -384,6 +392,44 @@
       "/home/donga/projects/ruby-rails/portfolio/app/channels/application_cable/connection.rb": [
         1,
         1,
+        null,
+        null
+      ],
+      "/home/donga/projects/ruby-rails/portfolio/app/controllers/blogs_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -479,6 +525,7 @@
         1,
         0,
         0,
+        0,
         null,
         null,
         1,
@@ -569,7 +616,8 @@
         1,
         null
       ],
-      "/home/donga/projects/ruby-rails/portfolio/app/models/profile.rb": [
+      "/home/donga/projects/ruby-rails/portfolio/app/models/blog.rb": [
+        1,
         1,
         1,
         1,
@@ -611,6 +659,8 @@
         null,
         null,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -673,7 +723,7 @@
         null,
         null
       ],
-      "/home/donga/projects/ruby-rails/portfolio/spec/factories/profiles.rb": [
+      "/home/donga/projects/ruby-rails/portfolio/spec/factories/blogs.rb": [
         1,
         1,
         1,
@@ -880,10 +930,12 @@
         1,
         null
       ],
-      "/home/donga/projects/ruby-rails/portfolio/spec/models/profile_spec.rb": [
+      "/home/donga/projects/ruby-rails/portfolio/spec/models/blog_spec.rb": [
         1,
         null,
         1,
+        2,
+        2,
         2,
         null
       ],
@@ -1054,6 +1106,6 @@
         null
       ]
     },
-    "timestamp": 1491403521
+    "timestamp": 1491916131
   }
 }
