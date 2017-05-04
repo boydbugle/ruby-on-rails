@@ -1,5 +1,5 @@
 class SightingsController < ApplicationController
-    def index 
+    def index
         @sightings = Sighting.all
     end
 
@@ -18,7 +18,7 @@ class SightingsController < ApplicationController
             redirect_to new_sighting_animal_path(@sighting)
         else
             render :new
-        end 
+        end
     end
 
     def edit
@@ -44,6 +44,6 @@ class SightingsController < ApplicationController
 
     private
     def sighting_params
-      params.require(:sighting).permit(:region,:warden,:zone)
+      params.require(:sighting).permit(:region,:warden,:zone,:address,:latitude,:longitude)
     end
 end

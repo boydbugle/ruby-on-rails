@@ -1,18 +1,19 @@
 <h1><%= @sighting.warden %></h1>
 <h1><%= @sighting.zone %></h1>
+<h1><%= @sighting.latitude %></h1>
 <h1><%= @sighting.region %></h1>
 
  <% if @sighting.animals.any? %>
     <h4>Here are the animals for this region:</h4>
     <table>
-      <tr>                          
+      <tr>
         <th>species</th>
         <th>numbers spotted</th>
         <th>description</th>
       </tr>
         <% @sighting.animals.each do |animal| %>
           <tr>
-            <td><%= animal.species %></td> 
+            <td><%= animal.species %></td>
             <td><%= animal.number %></td>
             <td><%= animal.description %></td>
             <td><%= link_to "Edit |", edit_sighting_animal_path(@sighting, animal) %></td>
@@ -32,4 +33,4 @@
   <p><%= link_to "Delete Sighting", sighting_path(@sighting),
                                    :data => {:confirm => "Are you sure?",
                                                   :method => "delete"} %></p>
-  <p><%= link_to "Return to sightings", sightings_path %></p> 
+  <p><%= link_to "Return to sightings", sightings_path %></p>
