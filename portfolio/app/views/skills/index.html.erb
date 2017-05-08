@@ -1,20 +1,26 @@
 <h1>Skills</h1>
 
-
-
-<table>
-  <tr>
-    <% @skills.each do |skill| %>
-      <th colspan="2"><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:thumb))%><%= skill.language %><% end %></td>
-  </tr>
-  <tr>
-    <% skill.projects.each do |project| %>
-        <td><%= link_to project.name, skill_project_path(skill,project) %></td>
-        <td><%= image_tag(project.image.url(:medium)) %></td>
-    <% end %>
-    </tr>
-  <% end %>
-</table>
-
-
-
+<div class=" container col-md-12">
+    <% if @skills.any?%>
+      <% @skills.each do |skill| %>
+        <h4 class=" skillimage"><%= link_to skill_path(skill) do%><%= image_tag skill.image.url(:thumb), class:" skill-image"%><%= skill.language %><% end %></h4>
+        <div class="row">
+          <% skill.projects.each do |project| %>
+            <div class="col-md-4 projectdiv" 
+            style="background: url('<%= project.image.url %>');
+             width: 25%; heigth: auto; padding: 8px;filter: blur(0.5px); ">
+             <div>
+              <%= image_tag project.image.url(:thumb), style: "width: 100%; opacity: 0.7;"%>
+            </div>
+            </div>
+            <div class="col-md-8 projectdiv">
+             <p><%= link_to project.name, skill_project_path(skill,project) %></p>
+             <p><%= link_to project.description, skill_project_path(skill,project) %></p>
+            </div>
+          <%end%>
+        </div>
+      <% end %>
+      <%else%>
+      no skills yet
+    <%end%>
+</div>
