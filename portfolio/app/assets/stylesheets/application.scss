@@ -81,8 +81,19 @@ body {
    padding: 7px;
 }
 .navbar-all-pages.scrolled {
-   padding: 0;
-   transition: all 500ms linear;
+   padding: 5px;
+   height: 80px;
+   transition: all 1000ms linear;
+   .img_avatar{
+        width: 60px;
+        height: 60px;
+    }
+    .navtext1{
+        font-size: 30px;
+    }
+    .navtext2{
+        display: none;
+    }
 }
 @media (min-width: 768px){
     .navbar-nav {
