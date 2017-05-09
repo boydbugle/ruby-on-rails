@@ -16,33 +16,38 @@
 //= require_tree .
 
 /* Open when someone clicks on the span element */
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
+// function openNav() {
+//     document.getElementById("myNav").style.width = "100%";
+// }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
+// function closeNav() {
+//     document.getElementById("myNav").style.width = "0%";
+// }
 
-function openTab(blockName) {
-    var i;
-    var x = document.getElementsByClassName("tab");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-    }
-    document.getElementById(blockName).style.display = "inline"; 
+// function openTab(blockName) {
+//     var i;
+//     var x = document.getElementsByClassName("tab");
+//     for (i = 0; i < x.length; i++) {
+//         x[i].style.display = "none"; 
+//     }
+//     document.getElementById(blockName).style.display = "inline"; 
 
-}
-$(document).scroll(function () {
-    var scroll = $(this).scrollTop();
-    var topDist = $(".content").position();
-    if ( scroll > topDist.top) {
-        $('nav').addClass("change");
-    } else {       
-        $('nav').removeClass("change");
-    }
+// }
+// $(document).scroll(function () {
+//     var scroll = $(this).scrollTop();
+//     var topDist = $(".content").position();
+//     if ( scroll > topDist.top) {
+//         $('nav').addClass("change");
+//     } else {       
+//         $('nav').removeClass("change");
+//     }
+// });
+
+
+ $(function() {
+   $(document).scroll(function() {
+       var $nav = $(".navbar-all-pages");
+       $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+   });
 });
-
-
- 
