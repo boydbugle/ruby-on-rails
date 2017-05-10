@@ -16,6 +16,10 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
+
 module WildifeTracker
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
