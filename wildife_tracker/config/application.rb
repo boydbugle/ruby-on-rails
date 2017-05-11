@@ -18,7 +18,7 @@ Bundler.require(*Rails.groups)
 
 Dotenv::Railtie.load
 
-GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
+GOOGLEMAP_API_KEY = ENV['GOOGLEMAP_API_KEY']
 
 module WildifeTracker
   class Application < Rails::Application

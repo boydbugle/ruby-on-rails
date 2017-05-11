@@ -1,20 +1,22 @@
+<div class="image">
+    <h1>here are your sightings</h1>
 
-<h1>here are your sightings</h1>
-
-<table>
-      <tr>
-        <th>Region</th>
-        <th>Warden</th>
-        <th>Zone</th>
+    <table>
+          <tr>
+            <th>Region</th>
+            <th>Warden</th>
+            <th>Zone</th>
+          </tr>
+    <% @sightings.each do |sighting| %>
+      <tr >
+        <td><%= link_to sighting.region, sighting_path(sighting) %></td>
+        <td><%= link_to sighting.warden %></td>
+        <td><%= link_to sighting.zone %></td>
+        __<p class="lat"><%= link_to sighting.latitude %></p><p class="lng"><%= link_to sighting.longitude %></p>
       </tr>
-<% @sightings.each do |sighting| %>
-  <tr >
-    <td><%= link_to sighting.region, sighting_path(sighting) %></td>
-    <td><%= link_to sighting.warden, sighting_path(sighting) %></td>
-    <td><%= link_to sighting.zone, sighting_path(sighting) %></td>
-  </tr>
-<% end %>
-</table>
+    <% end %>
+    </table>
 
- <br>
-  <%= link_to "New Sighting", new_sighting_path %>
+    <br>
+      <%= link_to "New Sighting", new_sighting_path %>
+    </div>
