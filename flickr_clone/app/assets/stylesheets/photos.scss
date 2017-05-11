@@ -1,3 +1,39 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page-bg {
+    background: url('/bg.jpg');
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#landing-page {
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+}
+
+#landing-page h1 {
+    font-size: 100px;
+}
+
+#landing-page a {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 20px;
+}

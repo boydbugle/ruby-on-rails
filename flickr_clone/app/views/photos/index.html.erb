@@ -1,5 +1,9 @@
-<h1>Photos#index</h1>
-
+<section id="landing-page">
+  <h1>Flickr</h1>
+  <h3>This is just a clone but better!</h3>
+  <div class="page-bg"></div>
+  <%= link_to "Post Photo", new_photo_path %>
+</section>
 
   <ul>
     <% @photos.each do |photo| %> 
@@ -13,4 +17,3 @@
     <% end %>
  </ul>
 <br />
-<%= link_to "Post Photo", new_photo_path %>
