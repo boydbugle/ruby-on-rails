@@ -1,5 +1,16 @@
 <div class="image">
-    <h1>here are your sightings</h1>
+    <h3>Amboseli National Park</h3>
+
+    <br />
+     <button class="btn btn-success"><%= link_to "New Sighting", new_sighting_path %></button>
+    </div>
+
+    <br />
+    <div id="map">  
+
+    </div><div id="map">  
+
+    </div>
 
     <table>
           <tr>
@@ -12,11 +23,8 @@
         <td><%= link_to sighting.region, sighting_path(sighting) %></td>
         <td><%= link_to sighting.warden %></td>
         <td><%= link_to sighting.zone %></td>
-        <p class="lat"><%= link_to sighting.latitude %></p><p class="lng"><%= link_to sighting.longitude %></p>
       </tr>
     <% end %>
     </table>
 
-    <br>
-      <%= link_to "New Sighting", new_sighting_path %>
-    </div>
+    
